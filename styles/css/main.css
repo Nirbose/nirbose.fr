@@ -15,6 +15,17 @@ body {
   margin: 0;
 }
 
+#cursor {
+  position: absolute;
+  z-index: -1;
+  width: 48px;
+  height: 48px;
+  transform: translate(-50%, -50%);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+  display: block;
+}
+
 .content {
   z-index: 100;
   display: flex;
@@ -49,247 +60,34 @@ body {
   left: 50%;
 }
 
+.icons {
+  position: absolute;
+  z-index: 100;
+  right: 50px;
+  bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+}
+.icons .icon {
+  text-decoration: none;
+  width: 40px;
+  height: 40px;
+  margin-bottom: 20px;
+  transition: 0.3s;
+}
+.icons .icon:hover {
+  transform: scale(1.2);
+}
+
 .confetie {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1;
-}
-.confetie .conf {
-  position: absolute;
-  display: block;
-  border-radius: 15px;
-  animation: a-conf 10s infinite;
-}
-
-.conf:nth-child(1) {
-  left: 23.4967000025%;
-  top: 83.2956293935%;
-  width: 38px;
-  height: 38px;
-  rotate: 12deg;
-  background-color: #8356A6;
-}
-
-.conf:nth-child(2) {
-  left: 20.2124351516%;
-  top: 8.8230240092%;
-  width: 44px;
-  height: 44px;
-  rotate: 231deg;
-  background-color: #2D73F3;
-}
-
-.conf:nth-child(3) {
-  left: 23.4399285043%;
-  top: 97.2695882668%;
-  width: 46px;
-  height: 46px;
-  rotate: 184deg;
-  background-color: #376FEA;
-}
-
-.conf:nth-child(4) {
-  left: 45.1069062139%;
-  top: 38.9613608429%;
-  width: 45px;
-  height: 45px;
-  rotate: 128deg;
-  background-color: #2D73F3;
-}
-
-.conf:nth-child(5) {
-  left: 21.5035631738%;
-  top: 3.2384757656%;
-  width: 3px;
-  height: 3px;
-  rotate: 93deg;
-  background-color: #376FEA;
-}
-
-.conf:nth-child(6) {
-  left: 73.8740211712%;
-  top: 57.1414022646%;
-  width: 41px;
-  height: 41px;
-  rotate: 148deg;
-  background-color: #8356A6;
-}
-
-.conf:nth-child(7) {
-  left: 49.4455574221%;
-  top: 97.4603078159%;
-  width: 10px;
-  height: 10px;
-  rotate: 319deg;
-  background-color: #2D73F3;
-}
-
-.conf:nth-child(8) {
-  left: 3.4601776825%;
-  top: 97.7200774244%;
-  width: 48px;
-  height: 48px;
-  rotate: 204deg;
-  background-color: #8356A6;
-}
-
-.conf:nth-child(9) {
-  left: 17.6754727059%;
-  top: 18.7266527166%;
-  width: 17px;
-  height: 17px;
-  rotate: 192deg;
-  background-color: #2D73F3;
-}
-
-.conf:nth-child(10) {
-  left: 98.7600153182%;
-  top: 12.2185319005%;
-  width: 26px;
-  height: 26px;
-  rotate: 304deg;
-  background-color: #376FEA;
-}
-
-.conf:nth-child(11) {
-  left: 3.4894263811%;
-  top: 99.5380185259%;
-  width: 38px;
-  height: 38px;
-  rotate: 268deg;
-  background-color: #376FEA;
-}
-
-.conf:nth-child(12) {
-  left: 48.1037503386%;
-  top: 33.2839906287%;
-  width: 35px;
-  height: 35px;
-  rotate: 55deg;
-  background-color: #2D73F3;
-}
-
-.conf:nth-child(13) {
-  left: 69.5028289698%;
-  top: 91.5226241557%;
-  width: 8px;
-  height: 8px;
-  rotate: 276deg;
-  background-color: #2D73F3;
-}
-
-.conf:nth-child(14) {
-  left: 47.699273226%;
-  top: 40.5963796645%;
-  width: 37px;
-  height: 37px;
-  rotate: 288deg;
-  background-color: #2D73F3;
-}
-
-.conf:nth-child(15) {
-  left: 95.7557908581%;
-  top: 79.7034019307%;
-  width: 44px;
-  height: 44px;
-  rotate: 196deg;
-  background-color: #8356A6;
-}
-
-.conf:nth-child(16) {
-  left: 79.5681225439%;
-  top: 78.1739221677%;
-  width: 1px;
-  height: 1px;
-  rotate: 344deg;
-  background-color: #2D73F3;
-}
-
-.conf:nth-child(17) {
-  left: 28.1542730566%;
-  top: 29.825936493%;
-  width: 18px;
-  height: 18px;
-  rotate: 96deg;
-  background-color: #376FEA;
-}
-
-.conf:nth-child(18) {
-  left: 22.8022234934%;
-  top: 15.0710609392%;
-  width: 28px;
-  height: 28px;
-  rotate: 12deg;
-  background-color: #8356A6;
-}
-
-.conf:nth-child(19) {
-  left: 5.7047203976%;
-  top: 60.4499465051%;
-  width: 29px;
-  height: 29px;
-  rotate: 291deg;
-  background-color: #2D73F3;
-}
-
-.conf:nth-child(20) {
-  left: 19.5812350046%;
-  top: 20.1588739424%;
-  width: 31px;
-  height: 31px;
-  rotate: 220deg;
-  background-color: #8356A6;
-}
-
-.conf:nth-child(21) {
-  left: 94.3896061727%;
-  top: 98.88605164%;
-  width: 36px;
-  height: 36px;
-  rotate: 285deg;
-  background-color: #376FEA;
-}
-
-.conf:nth-child(22) {
-  left: 64.4265034005%;
-  top: 8.3576768085%;
-  width: 28px;
-  height: 28px;
-  rotate: 297deg;
-  background-color: #8356A6;
-}
-
-.conf:nth-child(23) {
-  left: 78.5200269036%;
-  top: 54.7382390155%;
-  width: 14px;
-  height: 14px;
-  rotate: 318deg;
-  background-color: #376FEA;
-}
-
-.conf:nth-child(24) {
-  left: 94.7367801464%;
-  top: 63.7965188042%;
-  width: 32px;
-  height: 32px;
-  rotate: 357deg;
-  background-color: #2D73F3;
-}
-
-@keyframes a-conf {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(10px);
-  }
-  100% {
-    transform: translateY(0);
-  }
+  z-index: -10;
 }
 
 /*# sourceMappingURL=main.css.map */
