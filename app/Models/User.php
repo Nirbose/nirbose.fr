@@ -48,9 +48,13 @@ class User extends Authenticatable
      * 
      * @return bool
      */
-    public function canEditArticle(): bool
+    public function canEditArticle(?Article $article = null): bool
     {
-        if ($this->role === 'admin') {
+        if ($this->role === 'writer') {
+            if (! is_null($article) && $article->author_id === $this->id) {
+                return true;
+            }
+            
             return true;
         }
 
