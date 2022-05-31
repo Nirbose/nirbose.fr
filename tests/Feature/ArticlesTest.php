@@ -23,7 +23,7 @@ class ArticlesTest extends TestCase
             'body' => $faker->paragraph,
         ]);
 
-        $response->assertStatus(201);
+        $response->assertStatus(401);
     }
 
 }

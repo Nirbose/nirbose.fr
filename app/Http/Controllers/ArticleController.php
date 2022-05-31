@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Gate;
 
 class ArticleController extends Controller
 {
@@ -20,6 +21,11 @@ class ArticleController extends Controller
 
     public function store(Request $request)
     {
+        // Verif if user has permission to create article and if is connected
+        if (! Gate::authorize('create-article')) {
+            return response()->json(['error' => 'You are not authorized to create an article'], 401);
+        }
+
         $article = DB::table('articles')->insert([
             'title' => $request->title,
             'body' => $request->body,

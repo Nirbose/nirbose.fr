@@ -23,6 +23,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::get('/articles', [ArticleController::class, 'index']);
 Route::get('/articles/{id}', [ArticleController::class, 'show']);
 Route::post('/articles', [ArticleController::class, 'store'])->middleware('auth:sanctum');
-Route::put('/articles/{id}', [ArticleController::class, 'update']);
-Route::delete('/articles/{id}', [ArticleController::class, 'destroy']);
+Route::put('/articles/{id}', [ArticleController::class, 'update'])->middleware('auth:sanctum');
+Route::delete('/articles/{id}', [ArticleController::class, 'destroy'])->middleware('auth:sanctum');
 
