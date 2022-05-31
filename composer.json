@@ -1,9 +1,14 @@
 {
-    "name": "laravel/laravel",
-    "type": "project",
-    "description": "The Laravel Framework.",
-    "keywords": ["framework", "laravel"],
+    "name": "nirbose.fr",
+    "type": "blog",
+    "description": "Code source for Nirbose.fr",
     "license": "MIT",
+    "authors": [
+        {
+            "name": "Nirbose",
+            "email": "contact@nirbose.fr"
+        }
+    ],
     "require": {
         "php": "^8.0.2",
         "guzzlehttp/guzzle": "^7.2",
